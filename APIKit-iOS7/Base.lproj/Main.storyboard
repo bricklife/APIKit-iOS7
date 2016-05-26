@@ -19,14 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHW-QV-Sgr">
-                                <rect key="frame" x="251.5" y="28" width="97" height="30"/>
+                                <rect key="frame" x="251.5" y="252" width="97" height="30"/>
                                 <state key="normal" title="Get Rate Limit"/>
                                 <connections>
                                     <action selector="buttonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBH-Vc-9mt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no2-V0-ogf">
-                                <rect key="frame" x="20" y="66" width="560" height="22"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="u48-vP-3og">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="no2-V0-ogf">
+                                <rect key="frame" x="20" y="318" width="560" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="MG7-zt-3mA"/>
                                 </constraints>
@@ -38,13 +41,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mHW-QV-Sgr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6gG-mV-vbm"/>
+                            <constraint firstItem="no2-V0-ogf" firstAttribute="top" secondItem="u48-vP-3og" secondAttribute="bottom" constant="8" id="7if-2z-RRU"/>
                             <constraint firstItem="no2-V0-ogf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="B9j-1f-NtP"/>
-                            <constraint firstItem="no2-V0-ogf" firstAttribute="top" secondItem="mHW-QV-Sgr" secondAttribute="bottom" constant="8" id="RKW-kb-48f"/>
                             <constraint firstItem="no2-V0-ogf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZhK-Ep-5kL"/>
-                            <constraint firstItem="mHW-QV-Sgr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hnc-Bg-vLA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="no2-V0-ogf" secondAttribute="bottom" constant="8" id="bx1-UC-v8S"/>
+                            <constraint firstItem="u48-vP-3og" firstAttribute="top" secondItem="mHW-QV-Sgr" secondAttribute="bottom" constant="8" id="dk5-lq-ScP"/>
+                            <constraint firstItem="u48-vP-3og" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fY2-9g-EmD"/>
+                            <constraint firstItem="u48-vP-3og" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mKp-ue-iQP"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="u48-vP-3og" id="aWd-5W-G1D"/>
                         <outlet property="label" destination="no2-V0-ogf" id="xu0-Ql-pMg"/>
                     </connections>
                 </viewController>
